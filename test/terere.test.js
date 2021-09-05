@@ -18,14 +18,16 @@ describe("Terere Drink Builder", function () {
     const result = terere.listSteps();
 
     const expected =
-      "\nPassos realizados:\npegue uma cuia" +
+      "\nPassos realizados:" +
+      "\npegue uma cuia" +
       "\nadicione 1/3 de erva mate" +
       "\nincline a cuia em 120 graus" +
       "\nposicione a bomba na diagonal no fundo da cuia" +
       "\nadicione 1/3 de erva mate" +
       "\nadicione 1x fatia de limão" +
       "\nadicione 1x fatia de limão" +
-      "\ncomplete com água bem gelada";
+      "\ncomplete com água bem gelada" +
+      "\n";
 
     assert.equal(result, expected);
   });

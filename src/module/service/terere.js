@@ -55,6 +55,6 @@ class Terere {
   steps = ["pegue uma cuia"];
 
   listSteps() {
-    return `\nPassos realizados:\n${this.steps.join("\n")}`;
+    return `\nPassos realizados:\n${this.steps.join("\n")}\n`;
   }
 }
