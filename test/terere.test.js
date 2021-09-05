@@ -1,5 +1,5 @@
 import assert from "assert";
-import { createTerereBuilder } from "../modules/factory/terere.js";
+import { createTerereBuilder } from "../src/module/factory/terere.js";
 
 describe("Terere Drink Builder", function () {
   it("Should return terere build steps", () => {

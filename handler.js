@@ -1,4 +1,4 @@
-import { createTerereBuilder } from "./modules/factory/terere.js";
+import { createTerereBuilder } from "./src/module/factory/terere.js";
 
 function main() {
   const terereBuilderSvc = createTerereBuilder();
