@@ -13,7 +13,6 @@ describe("Terere Drink Builder", function () {
       .addFatiaDeLimao()
       .addFatiaDeLimao()
       .addAguaGelada()
-      .listarPassosRealizados()
       .build();
 
     const result = terere.listSteps();
