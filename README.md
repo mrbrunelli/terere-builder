@@ -31,3 +31,7 @@ const objTwo = createObjInstance()
 const objThree = createOjbInstance("I am an optional parameter")
 const objFour = createOjbInstance()
 ```
+
+## What the hell is Tereré?
+#### Practically an iced tea with water or juice
+![](.github/terere.png)
