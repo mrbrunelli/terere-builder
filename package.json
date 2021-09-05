@@ -6,12 +6,14 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
-    "start": "node handler.js"
+    "start": "node handler.js",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^7.0.0",
     "mocha": "^9.1.1"
   }
 }
