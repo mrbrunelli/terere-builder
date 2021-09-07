@@ -11,6 +11,8 @@ function main() {
     .addFatiaDeLimao()
     .addFatiaDeLimao()
     .addAguaGelada()
+    .addAguaGeladaComLimao()
+    .removerUltimoPasso()
     .listarPassosRealizados()
     .build();
 }

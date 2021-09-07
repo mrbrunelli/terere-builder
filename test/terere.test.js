@@ -12,10 +12,13 @@ describe("Terere Drink Builder", function () {
       .addErvaMate()
       .addFatiaDeLimao()
       .addFatiaDeLimao()
+      .addAguaGeladaComLimao()
       .addAguaGelada()
-      .build();
+      .removerUltimoPasso();
 
-    const result = terere.listSteps();
+    const result = terere.listarPassosRealizados({ isTesting: true });
+
+    terere.build();
 
     const expected =
       "\nPassos realizados:" +
@@ -26,7 +29,7 @@ describe("Terere Drink Builder", function () {
       "\nadicione 1/3 de erva mate" +
       "\nadicione 1x fatia de limão" +
       "\nadicione 1x fatia de limão" +
-      "\ncomplete com água bem gelada" +
+      "\ncomplete com água bem gelada com limão" +
       "\n";
 
     assert.equal(result, expected);
