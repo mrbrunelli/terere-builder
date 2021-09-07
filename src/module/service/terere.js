@@ -1,16 +1,16 @@
 export class TerereBuilder {
-  #terereRepository
+  #terereRepository;
 
   constructor({ terereRepository }) {
-    this.#terereRepository = terereRepository
+    this.#terereRepository = terereRepository;
   }
 
   reset() {
-    this.#terereRepository = {}
+    this.#terereRepository = {};
   }
 
   addErvaMate() {
-    this.#terereRepository.save("adicione 1/3 de erva mate")
+    this.#terereRepository.save("adicione 1/3 de erva mate");
     return this;
   }
 
@@ -20,7 +20,9 @@ export class TerereBuilder {
   }
 
   posicionarBomba() {
-    this.#terereRepository.save("posicione a bomba na diagonal no fundo da cuia");
+    this.#terereRepository.save(
+      "posicione a bomba na diagonal no fundo da cuia"
+    );
     return this;
   }
 
@@ -39,20 +41,25 @@ export class TerereBuilder {
     return this;
   }
 
+  removerUltimoPasso() {
+    this.#terereRepository.removeLast();
+    return this;
+  }
+
   listarPassosRealizados({ isTesting } = { isTesting: false }) {
-    const steps = this.#terereRepository.find()
-    const formatedSteps = `\nPassos realizados:\n${steps.join("\n")}\n`
+    const steps = this.#terereRepository.find();
+    const formatedSteps = `\nPassos realizados:\n${steps.join("\n")}\n`;
 
     if (isTesting) {
-      return formatedSteps
+      return formatedSteps;
     }
 
-    console.log(formatedSteps)
+    console.log(formatedSteps);
     return this;
   }
 
   build() {
-    const terere = this
+    const terere = this;
     this.reset();
     return terere;
   }

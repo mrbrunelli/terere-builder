@@ -13,11 +13,12 @@ describe("Terere Drink Builder", function () {
       .addFatiaDeLimao()
       .addFatiaDeLimao()
       .addAguaGeladaComLimao()
-    
-    const result = terere
-      .listarPassosRealizados({ isTesting: true})
+      .addAguaGelada()
+      .removerUltimoPasso();
 
-    terere.build()
+    const result = terere.listarPassosRealizados({ isTesting: true });
+
+    terere.build();
 
     const expected =
       "\nPassos realizados:" +

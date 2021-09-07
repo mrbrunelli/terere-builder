@@ -34,7 +34,7 @@ const objFour = createOjbInstance()
 
 ### Repository pattern
 * Useful for abstracting data persistence.
-* Methods have descriptive names (find, findById, findByName, save, delete etc).
+* Methods have descriptive names (find, findById, findByName, create, save, delete, remove etc).
 
 ##### Example
 ```js
