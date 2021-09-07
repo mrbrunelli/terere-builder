@@ -1,5 +1,3 @@
-import { createTerereModel } from "../factory/terere.js"
-
 export class TerereRepository {
   constructor({ terereModel }) {
     this.terereModel = terereModel

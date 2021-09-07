@@ -7,9 +7,11 @@ export function createTerereModel() {
 }
 
 export function createTerereRepository() {
-  return new TerereRepository({ terereModel: createTerereModel() })
+  const terereModel = createTerereModel()
+  return new TerereRepository({ terereModel })
 }
 
 export function createTerereBuilder() {
-  return new TerereBuilder({ terereRepository: createTerereRepository() });
+  const terereRepository = createTerereRepository()
+  return new TerereBuilder({ terereRepository });
 }
