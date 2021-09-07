@@ -1,3 +1,3 @@
 export class Terere {
-  steps = ["pegue uma cuia"]
+  steps = ["pegue uma cuia"];
 }

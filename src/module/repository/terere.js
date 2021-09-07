@@ -1,19 +1,19 @@
 export class TerereRepository {
-  #terereModel
+  #terereModel;
 
   constructor({ terereModel }) {
-    this.#terereModel = terereModel
+    this.#terereModel = terereModel;
   }
 
   find() {
-   return this.#terereModel.steps
+    return this.#terereModel.steps;
   }
 
   save(step) {
-    this.#terereModel.steps.push(step)
+    this.#terereModel.steps.push(step);
   }
 
   removeLast() {
-    this.#terereModel.steps.pop()
+    this.#terereModel.steps.pop();
   }
 }
