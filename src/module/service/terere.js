@@ -1,60 +1,59 @@
 export class TerereBuilder {
-  #terere;
+  #terereRepository
 
-  constructor() {
-    this.reset();
+  constructor({ terereRepository }) {
+    this.#terereRepository = terereRepository
   }
 
   reset() {
-    this.#terere = new Terere();
+    this.#terereRepository = {}
   }
 
   addErvaMate() {
-    this.#terere.steps.push("adicione 1/3 de erva mate");
+    this.#terereRepository.save("adicione 1/3 de erva mate")
     return this;
   }
 
   inclinarCuia() {
-    this.#terere.steps.push("incline a cuia em 120 graus");
+    this.#terereRepository.save("incline a cuia em 120 graus");
     return this;
   }
 
   posicionarBomba() {
-    this.#terere.steps.push("posicione a bomba na diagonal no fundo da cuia");
+    this.#terereRepository.save("posicione a bomba na diagonal no fundo da cuia");
     return this;
   }
 
   addFatiaDeLimao() {
-    this.#terere.steps.push("adicione 1x fatia de limão");
+    this.#terereRepository.save("adicione 1x fatia de limão");
     return this;
   }
 
   addAguaGelada() {
-    this.#terere.steps.push("complete com água bem gelada");
+    this.#terereRepository.save("complete com água bem gelada");
     return this;
   }
 
   addAguaGeladaComLimao() {
-    this.#terere.steps.push("complete com água bem gelada com limão");
+    this.#terereRepository.save("complete com água bem gelada com limão");
     return this;
   }
 
-  listarPassosRealizados() {
-    console.log(this.#terere.listSteps());
+  listarPassosRealizados({ isTesting } = { isTesting: false }) {
+    const steps = this.#terereRepository.find()
+    const formatedSteps = `\nPassos realizados:\n${steps.join("\n")}\n`
+
+    if (isTesting) {
+      return formatedSteps
+    }
+
+    console.log(formatedSteps)
     return this;
   }
 
   build() {
-    const terere = this.#terere;
+    const terere = this
     this.reset();
     return terere;
-  }
-}
-
-class Terere {
-  steps = ["pegue uma cuia"];
-
-  listSteps() {
-    return `\nPassos realizados:\n${this.steps.join("\n")}\n`;
   }
 }
